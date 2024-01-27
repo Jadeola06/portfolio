@@ -131,7 +131,7 @@
 
   .skills,
   .project-card {
-    width: 100%; /* Adjusted width for responsiveness */
+    width: 90%; /* Adjusted width for responsiveness */
     text-align: left;
   }
   #paragraph-expl {
