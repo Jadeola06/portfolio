@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../Nav'
 
-export default function ProjectPage(){
+export default function Credits(){
 
     return(
         <div>
