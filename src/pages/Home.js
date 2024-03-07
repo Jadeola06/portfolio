@@ -37,6 +37,12 @@ export default function Home(){
                     technologies = "React.js, Springboot, CSS, RESTful API Design"
                     image  = 'https://static.sheetgo.com/wp-content/uploads/2020/05/icons-expense-tracker.svg'/>
                 <ProjectCard 
+                    title = {'Real Estate & Property Online Market'} 
+                    description = {'Property.com is a comprehensive platform for buying and selling homes and properties. Users can explore a wide range of listings, from cozy apartments to spacious houses, and find their perfect match. Sellers can easily list their properties and connect with potential buyers. Our site also provides valuable resources and tools to help users make informed decisions about their real estate transactions.'} 
+                    id = {0}
+                    technologies = "React.js, Springboot, CSS, RESTful API Design, Google Map API, Google Sign in API"
+                    image  = 'https://www.shutterstock.com/image-photo/beautiful-home-exterior-160071032'/>
+                <ProjectCard 
                 title = {'Mobile Budgeting App'} 
                 description = {'A mobile app that helps to simplify your finances on the fly. Created with Flutter and Dart. Effortlessly track expenses and set spending limits.'}
                  id = {0} 
