@@ -2,6 +2,7 @@ import React from 'react';
 
 import Nav from "../Nav.js";
 import ProjectCard from "../components/ProjectCard.js"
+import biyarLogo from "../components/BiyarLogo.png"
 
 export default function Home(){
 
@@ -30,6 +31,15 @@ export default function Home(){
             </div>
             <div className='projects'>
                 <p>PROJECTS</p>
+                <a href="https://frontend-website-example.com" target="_blank" rel="noopener noreferrer">
+                    <ProjectCard 
+                        title={'BiyarTech Home Page'} 
+                        description={'A front-end website showcasing a modern design with responsiveness and interactive features. Built using React and Tailwind CSS.'} 
+                        id={0}
+                        technologies="React.js, Tailwind CSS"
+                        image={biyarLogo}
+                    />
+                </a>
                 <ProjectCard 
                     title = {'Expense Tracker Application'} 
                     description = {'Manage your finances effortlessly with my Expense Tracker application. It\'s a simple tool designed to help you keep track of your expenses, set budget goals, and gain insights into your spending patterns. Stay organized and make informed financial decisions. Give it a try and simplify your budgeting today.'} 
