@@ -2,7 +2,7 @@ import React from 'react';
 
 import Nav from "../Nav.js";
 import ProjectCard from "../components/ProjectCard.js"
-import biyarLogo from "../components/BiyarLogo.png"
+import biyarLogo from "../components/Logo.png"
 
 export default function Home(){
 
