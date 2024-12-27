@@ -31,7 +31,7 @@ export default function Home(){
             </div>
             <div className='projects'>
                 <p>PROJECTS</p>
-                <a href="https://frontend-website-example.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://biyartech.com" target="_blank" rel="noopener noreferrer">
                     <ProjectCard 
                         title={'BiyarTech Home Page'} 
                         description={'A front-end website showcasing a modern design with responsiveness and interactive features. Built using React and Tailwind CSS.'} 
