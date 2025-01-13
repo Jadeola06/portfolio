@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Credits from './pages/Credits'
+import FourOFour from './pages/404';
 
 
 
@@ -11,7 +12,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/credits" exact element={<Credits />} />
+        <Route path="/credits" element={<Credits />} />
+        <Route path="/*" element={<FourOFour />} />
       </Routes>
     </Router>
   );
