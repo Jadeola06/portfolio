@@ -1,23 +1,26 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import axios from 'axios'; // Import axios
 import Nav from "../Nav.js";
 import ProjectCard from "../components/ProjectCard.js"
 import biyarLogo from "../components/Logo.png"
 
-export default function Home(){
-    console.log("Hello")
+export default function Home() {
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://18.191.202.13:8080/api/v1/client', {
+                    withCredentials: true,
+                });
+                console.log(response.data);
+            } catch (error) {
+                console.error('There was an error fetching the members!', error);
+            }
+        };
 
-    try {
-        const response = await axios.get('http://18.191.202.13:8080/api/v1/client', {
-          withCredentials: true,
-        });
-        console.log(response.data);
-      } catch (error) {
-        console.error('There was an error fetching the members!', error);
-    }
+        fetchData(); // Call fetchData inside useEffect
+    }, []); // Empty dependency array ensures this runs once when the component mounts
 
-
-    return(
+    return (
         <div className='Home'>
             <Nav />
             <div className='home-page'>
@@ -63,11 +66,11 @@ export default function Home(){
                     technologies = "React.js, Springboot, CSS, RESTful API Design, Google Map API, Google Sign in API"
                     image  = 'https://img.freepik.com/premium-photo/big-american-house-generative-ai_170984-9624.jpg'/>
                 <ProjectCard 
-                title = {'Mobile Budgeting App'} 
-                description = {'A mobile app that helps to simplify your finances on the fly. Created with Flutter and Dart. Effortlessly track expenses and set spending limits.'}
-                 id = {0} 
-                 technologies = {'Flutter, SQL, Dart'}
-                 image = {'https://miro.medium.com/v2/resize:fit:4800/format:webp/1*PiEaWUoTxVFPU-Nr2k2J_Q.png'}/>
+                    title = {'Mobile Budgeting App'} 
+                    description = {'A mobile app that helps to simplify your finances on the fly. Created with Flutter and Dart. Effortlessly track expenses and set spending limits.'}
+                    id = {0} 
+                    technologies = {'Flutter, SQL, Dart'}
+                    image = {'https://miro.medium.com/v2/resize:fit:4800/format:webp/1*PiEaWUoTxVFPU-Nr2k2J_Q.png'}/>
                 <ProjectCard 
                     title = {'Quiz Website'} 
                     description = {'A minimalist quiz website powered by React.js. Delve into a variety of subjects with questions sourced from an external API, ensuring fresh and diverse content.'} 
@@ -76,5 +79,5 @@ export default function Home(){
                     image = 'https://static.vecteezy.com/system/resources/previews/003/206/208/non_2x/quiz-time-neon-signs-style-text-free-vector.jpg'/>
             </div>
         </div>
-    )
+    );
 }
