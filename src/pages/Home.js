@@ -6,6 +6,15 @@ import biyarLogo from "../components/Logo.png"
 
 export default function Home(){
 
+    try {
+        const response = await axios.get('http://18.191.202.13:8080/api/v1/client', {
+          withCredentials: true,
+        });
+        console.log(response.data);
+      } catch (error) {
+        console.error('There was an error fetching the members!', error);
+    }
+
 
     return(
         <div className='Home'>
