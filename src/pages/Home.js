@@ -5,6 +5,7 @@ import ProjectCard from "../components/ProjectCard.js"
 import biyarLogo from "../components/Logo.png"
 
 export default function Home(){
+    console.log("Hello")
 
     try {
         const response = await axios.get('http://18.191.202.13:8080/api/v1/client', {
