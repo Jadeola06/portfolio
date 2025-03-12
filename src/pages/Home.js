@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import ProjectCard from "../components/ProjectCard.js";
 import { motion } from "framer-motion";
 
